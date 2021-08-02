@@ -1,14 +1,10 @@
 
-/*
+
 :root{
-    --main-bg-color: #f4f;
-}
-body{
-    background: var(--main-bg-color);
-    padding-bottom: 50px;
+    --text-color: #f4f;
+
 }
 
-*/
 
 body{
     padding-bottom: 50px;
@@ -63,9 +59,11 @@ body{
 }
 
 .darkMode{
-    background: rgb(10, 10, 10);
-    color: rgb(245, 245, 245);
+    background: rgb(17, 17, 17);
+    color: var(--text-color);
+
 }
+
 
 .bigTitle{
     font-size: 2.5em;
