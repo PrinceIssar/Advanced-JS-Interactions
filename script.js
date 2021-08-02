@@ -7,7 +7,14 @@ function randomLetter(){
     return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
-const box = document.querySelectorAll('.lightMode');
-const  boxStyles = getComputedStyle(box);
-const boxMainColor = boxStyles.getPropertyValue('color');
-console.log(boxMainColor);
+var content = document.querySelectorAll('.image');
+const button = document.querySelectorAll('.mode');
+
+button.onClick = function (){
+    if (content.)
+}
+
+
+
+// getComputedStyle()
+// getPropertyValue

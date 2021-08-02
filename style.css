@@ -1,9 +1,16 @@
 
+/*
 :root{
     --main-bg-color: #f4f;
 }
 body{
     background: var(--main-bg-color);
+    padding-bottom: 50px;
+}
+
+*/
+
+body{
     padding-bottom: 50px;
 }
 
