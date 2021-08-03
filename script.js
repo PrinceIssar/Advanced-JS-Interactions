@@ -49,5 +49,22 @@ window.addEventListener('scroll', function(e) {
         }
     }
 
+});
 
+const images = document.querySelectorAll(".picture img");
+const modal  = document.querySelector(".modal");
+const modalImg  = document.querySelector(".modalImg");
+const modalTxt = document.querySelector(".modalTxt");
+const close = document.querySelector(".close");
+
+images.forEach(images =>{
+   images.addEventListener("click", ()=>{
+     modalImg.src = images.src;
+     modalTxt.innerHTML = image.alt;
+      modal.classList.add("appear");
+
+      close.addEventListener("click",()=>{
+          modal.classList.remove("appear");
+      });
+   });
 });

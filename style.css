@@ -13,6 +13,7 @@ body{
 section{
     height: 100%;
 }
+
 ul{
     list-style-type: none;
     padding: 0;
@@ -41,11 +42,73 @@ span{
     padding: 10px;
 }
 
-.image{
-    height: 250px;
-    background: midnightblue;
+.images{
+    border-style: hidden;
+    transition: 0.3s all ease;
 }
 
+.images:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.modal{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    z-index: 1; /* to set it on top of everything*/
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalContent{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalImg{
+    width: 50%;
+    max-width: 700px;
+    animation: zoom 0.3s linear;
+}
+
+.modalTxt{
+    margin-top: 1em;
+    animation: zoom 0.3s linear;
+}
+
+.close{
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal.appear{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal.appear .modalImg, .modalTxt{
+   animation: zoom 0.3s linear;
+}
+@keyframes zoom {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform:scale(1) ;
+    }
+}
 .poke{
     font-weight: bold;
 }
@@ -72,6 +135,7 @@ span{
 .carouselContainer{
     background: royalblue;
     height: 400px;
+    overflow: hidden;
 }
 
 .title{
@@ -89,6 +153,11 @@ span{
     background: rgb(17, 17, 17);
     color: var(--text-color);
 
+}
+
+.darkMode .images{
+    border-color: #ff44ff;
+    border-style: solid;
 }
 
 
