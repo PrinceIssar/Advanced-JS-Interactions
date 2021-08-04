@@ -5,13 +5,35 @@ Array.from(document.querySelectorAll(".letter")).forEach(el => {
 function randomLetter(){
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
     return alphabet[Math.floor(Math.random() * alphabet.length)]
+
 }
 
 
+// crazy text
+function changeText(obj, text){
+    obj.innerText = text;
+}
+
+
+
+// Dark Mode
 function mode(){
     var element = document.body;
     element.classList.toggle('darkMode');
 }
+
+
+// Hover text
+function show(Id) {
+    if (event.type === 'mouseover'){
+        document.getElementById(Id).style.display="block";
+    }if (event.type === 'mouseout'){
+        document.getElementById(Id).style.display="inline";
+    }
+}
+
+
+
 //The increment and loop is achieved using ++c % tot
 // The angryCat boolean flag helps to know it the auto()
 // already started (mouse was there!),
@@ -30,6 +52,7 @@ function mode(){
 //    });
 // });
 
+// Parallax Carousel
 window.addEventListener('scroll', function(e) {
 
     const target = document.querySelectorAll('.scroll');
@@ -51,11 +74,13 @@ window.addEventListener('scroll', function(e) {
 
 });
 
+// Collage
 const images = document.querySelectorAll(".images img");
 const modal  = document.querySelector(".modal");
 const modalImg  = document.querySelector(".modalImg");
 const modalTxt = document.querySelector(".modalTxt");
 const close = document.querySelector(".close");
+
 
 images.forEach(images =>{
    images.addEventListener("click", ()=>{
@@ -68,3 +93,93 @@ images.forEach(images =>{
       });
    });
 });
+
+// Chaser
+
+let chaser = document.querySelector('.chaser');
+let chaserBox = document.getElementById('chaserBox');
+
+chaserBox.addEventListener('mouseover', startChase);
+chaserBox.addEventListener('mousemove', Chase);
+chaserBox.addEventListener('mouseout', stopChase);
+
+function startChase(){
+    chaser.style.display = 'block';
+}
+function Chase(e){
+    chaser.style.position = 'fixed';
+    chaser.style.left = e.clientX + 'px';
+    chaser.style.top = e.clientY + 'px';
+}
+
+function stopChase(){
+    chaser.style.display = 'none'
+}
+// Runner
+
+// const evilButton =  document.querySelector('.runner')
+// const OFFSET =100;
+//
+// evilButton.addEventListener('click', ()=>{
+//    alert('nice')
+// });
+//
+// document.addEventListener('mouseover', (e)=>{
+//     const x = e.pageX;
+//     const y = e.pageY;
+//     const buttonBox = evilButton.getBoundingClientRect();
+// const horizontalDistanceFrom = distanceFromCenter(buttonBox.x, x, buttonBox.width);
+// const verticalDistanceFrom = distanceFromCenter(buttonBox.y, y, buttonBox.height);
+// const horizontalOffset = buttonBox.width / 2 + OFFSET
+// const verticalOffset = buttonBox.height / 2 + OFFSET
+//
+//     if (Math.abs(horizontalDistanceFrom)<= horizontalOffset &&  Math.abs(verticalDistanceFrom)<= verticalOffset){
+//         setButtonPosition(
+//             buttonBox.x + horizontalOffset / horizontalDistanceFrom * 10,
+//             buttonBox.y + verticalOffset / verticalDistanceFrom * 10,
+//         )
+//     }
+// })
+//
+// function setButtonPosition(left,top){
+//     const windowBox =  document.body.getBoundingClientRect()
+//     const buttonBox =  evilButton.getBoundingClientRect()
+//
+//     if (distanceFromCenter(left, windowBox.left, buttonBox.width) < 0){
+//         left = windowBox.right - buttonBox.width - OFFSET
+//     }if (distanceFromCenter(left, windowBox.right, buttonBox.width) > 0){
+//         left = windowBox.left + OFFSET
+//     }if (distanceFromCenter(top, windowBox.top, buttonBox.height) < 0){
+//         top = windowBox.bottom - buttonBox.height - OFFSET
+//     }if (distanceFromCenter(top, windowBox.bottom, buttonBox.height) > 0){
+//         top = windowBox.top + OFFSET
+//     }
+//
+//
+//     evilButton.style.left = `${left}px`
+//     evilButton.style.top= `${top}px`
+//
+// }
+// function distanceFromCenter(boxPosition, mousePosition, boxSize){
+//     return boxPosition - mousePosition + boxSize / 2
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

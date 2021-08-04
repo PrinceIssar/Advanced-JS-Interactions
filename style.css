@@ -8,6 +8,8 @@
 body{
     padding-bottom: 50px;
     margin: 0;
+
+
 }
 
 section{
@@ -127,12 +129,14 @@ ul .scroll {
 .poke{
     font-weight: bold;
 }
-
 .chaser{
     width: 50px;
     height: 50px;
     background: red;
     border-radius: 50%;
+   transform: translate(-50%,-50%);
+    position: absolute;
+    transition: width .3s ease-in-out, height .3s ease-in-out;
 }
 
 .runner{
@@ -216,3 +220,4 @@ display: none;
 div ul li img .text:hover{
 
 }
+

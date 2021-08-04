@@ -116,23 +116,30 @@
         </div>
     </div>
 
+
     <div class="row popupText">
+
         <div class="col-12 title">When I hover a Pokemon's name, I want to get a small popup image above it to see what it looks like!</div>
         <div class="col-12 text">It is stated in multiple Pokédex entries that some Pokémon are known to eat others, such as 
-            <span class="poke">Pidgeot</span>
-            <img src="img/pidgeot.png" alt="">  swooping down to catch a
-            <span class="poke">Magikarp</span>
-            <img src="img/magikarp.png" alt="">meal from the water. Humans have also been implied to eat Pokémon, with the player's Mom's Cinnabar Volcano Burgers and Team Rocket's plot to sell
-            <span class="poke">Slowpoke</span>
-            <img src="img/slowpoke.png" alt="">Tails as a sweet treat.
-            <span class="poke">Farfetch'd</span>
-            <img src="img/Farfetch'd.png" alt="">itself is based on a specific manner for preparing a meal of duck, with its rarity in the wild being a result of overhunting.</div>
+
+            <span onmouseout="show('noImage1')" onmouseover="show('myImage1')" class="poke">Pidgeot</span>
+            <img id="myImage1" border="0" style="display:none;" src="img/pidgeot.png" alt="">  swooping down to catch a
+            <img src="" alt="">
+            <span onmouseout="show('noImage2')" onmouseover="show('myImage2')" class="poke">Magikarp</span>
+            <img id="myImage2" border="0" style="display:none;" src="img/magikarp.png" alt="">meal from the water. Humans have also been implied to eat Pokémon, with the player's Mom's Cinnabar Volcano Burgers and Team Rocket's plot to sell
+
+            <span onmouseout="show('noImage3')"  onmouseover="show('myImage3')" class="poke">Slowpoke</span>
+            <img id="myImage3" border="0" style="display:none;" src="img/slowpoke.png" alt="">Tails as a sweet treat.
+
+            <span onmouseout="show('noImage4')" onmouseover="show('myImage4')" class="poke">Farfetch'd</span>
+            <img id="myImage4" border="0" style="display:none;" src="img/Farfetch'd.png" alt="">itself is based on a specific manner for preparing a meal of duck, with its rarity in the wild being a result of overhunting.</div>
+
     </div>
     
 
     <div class="row game">
         <div class="col-12 title">See this red circle in the box? I want you to make this a chasing circle, it will run after your cursor as long as it is in the box!</div>
-        <div class="col-12 box">
+        <div class="col-12 box" id="chaserBox">
             <div class="chaser"></div>
         </div>
         <div class="col-12 title">See this green circle in the box? I want you to make this a running circle, it will run away from your cursor as long as it is in the box!</div>
@@ -143,10 +150,14 @@
     <div class="row wtf">
         <div class="col-12 title">As a final challenge, I want you to get creative! All of the following letters in the box are inside of spans with the same class. Based on key inputs or mouse movements I want you to make them do weird stuff. It could be anything! For example, you can make all the "e" letters disappear if you press said key. You could make all letters move / rotate when you move the mouse, based on which letter it is! Go crazy!</div>
         <div class="col-12 box">
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'ChangeText.')" class="letter"></span>
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'ChangeText.')" class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'ChangeText.')" class="letter"></span>
             <span class="letter"></span>
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'')" class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
@@ -378,6 +389,7 @@
             <span class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'ChangeText.')" class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
@@ -387,16 +399,13 @@
             <span class="letter"></span>
             <span class="letter"></span>
             <span class="letter"></span>
-            <span class="letter"></span>
-            <span class="letter"></span>
-            <span class="letter"></span>
-            <span class="letter"></span>
-            <span class="letter"></span>
-            <span class="letter"></span>
+            <span onmouseover="changeText(this,'Hello world')" onmouseout="changeText(this,'ChangeText.')" class="letter"></span>
         </div>
     </div>
 </section>
 <div class="mode" onclick="mode()">💡</div>
+
+<a href="#" title="back to top" class="top" onclick="return confirm('Are you sure you want to go back to top')">Back to top </a>
 
 <script src="script.js"></script>
 <!--<script src="https://use.fontawesome.com/76db5574f1.js" crossorigin="anonymous"></script>-->

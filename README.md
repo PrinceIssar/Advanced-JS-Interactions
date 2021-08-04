@@ -13,5 +13,6 @@ You can get and set variable from CSS.
 
 - https://ryanfeigenbaum.com/dark-mode/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/:root
-
+##  hover over text
+https://www.daniweb.com/programming/web-development/threads/251417/onmouseover-the-text-then-display-image
 
